@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="chat">
+  <head>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+
+  <div>HELLO small world</div>
+  <body ng-controller="chatController">
+    <li class="grid-all" ng-repeat="tile in chat.tiles">
+      <div id="{{tile.x}},{{tile.y}}">{{tile.x}},{{tile.y}}</div>
+    </li>
+  </body>
+</html>
